@@ -10,7 +10,7 @@
 
   age.secrets.spotify = {
     file = "${self}/secrets/spotify.age";
-    owner = "mihai";
+    owner = "aayush";
     group = "users";
   };
 
@@ -21,12 +21,10 @@
     kernelPackages = pkgs.linuxPackages_latest;
 
     kernelParams = [
-      "amd_pstate=active"
       "quiet"
       "loglevel=3"
       "systemd.show_status=auto"
       "rd.udev.log_level=3"
-      "ideapad_laptop.allow_v4_dytc=Y"
       ''acpi_osi="Windows 2020"''
     ];
   };
